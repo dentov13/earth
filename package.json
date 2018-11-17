@@ -6,8 +6,12 @@
     "react-scripts": "2.1.1"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
+    "babel-polyfill": "^6.26.0",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "styled-components": "^4.1.1",
+    "styled-reset": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
