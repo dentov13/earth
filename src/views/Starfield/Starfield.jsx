@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import bg from '../../assets/images/starfield.png';
+import bg from 'assets/images/starfield.png';
 
 const Background = styled.div`
     background: url(${bg}) no-repeat center center;
