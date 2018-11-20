@@ -13,10 +13,10 @@ const CountriesGrid = styled.div`
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background: ${props => props.blue ? 'blue' : 'red'};
+    background: rgba(0,0,0,.5);
     border-radius: 10px 0 0 10px;
     padding: 30px;
-    opacity: .3;
+    opacity: ${(props) => props.disabled ? '0.3' : '1'};
 `;
 
 const Country = styled.div`
