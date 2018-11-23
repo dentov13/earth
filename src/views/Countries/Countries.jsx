@@ -24,7 +24,6 @@ const Country = styled.div`
     cursor: pointer;
 `;
 
-
 const CountryTitle = styled.p`
     color: white;
     margin: ${_size(10)} 0;
@@ -36,7 +35,7 @@ export default class Countries extends Component {
         return (
             <CountriesGrid>
                 {icons && icons.map((path, index) => {
-                    let parseName = x => x.split('/').pop().split('.')[0];
+                    let parseName = path => path.split('/').pop().split('.')[0];
 
                     return (
                         <Country key={index}>
