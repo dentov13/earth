@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import bg from 'assets/images/starfield.png';
 
@@ -11,10 +11,8 @@ const Background = styled.div`
     left: 0;
 `;
 
-export default class Starfield extends Component {
-    render() {
-        return (
-            <Background />
-        );
-    }
+export default function Starfield() {
+    return (
+        <Background />
+    );
 }

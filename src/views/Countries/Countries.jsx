@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
-import _import from 'helpers';
+import { _size, _import } from 'helpers/';
 import styled from 'styled-components';
 
 const CountriesGrid = styled.div`
     z-index: 5;
     width: 50vw;
     height: 50vh;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background: rgba(0,0,0,.5);
-    border-radius: 10px 0 0 10px;
-    padding: 30px;
+    background: rgba(255,255,255,.1);
+    border-radius: ${_size(10)} 0 0 ${_size(10)};
+    padding: ${_size(30)};
     opacity: ${(props) => props.disabled ? '0.3' : '1'};
 `;
 
 const Country = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
+    padding: ${_size(5)};
+    cursor: pointer;
+`;
+
+
+const CountryTitle = styled.p`
+    color: white;
+    margin: ${_size(10)} 0;
 `;
 export default class Countries extends Component {
     render() {
@@ -35,8 +40,8 @@ export default class Countries extends Component {
 
                     return (
                         <Country key={index}>
-                            <img src={path} alt={parseName(path)} />
-                            <p>{parseName(path).toUpperCase()}</p>
+                            <img src={path} width="107" height="70" alt={parseName(path)} />
+                            <CountryTitle>{parseName(path).toUpperCase()}</CountryTitle>
                         </Country>
                     );
                 })}
