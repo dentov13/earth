@@ -8,11 +8,15 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "babel-polyfill": "^6.26.0",
+    "d3": "^5.7.0",
+    "d3-queue": "^3.0.7",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "styled-components": "^4.1.1",
     "styled-reset": "^1.6.0",
-    "three": "^0.98.0"
+    "three": "^0.98.0",
+    "three-orbitcontrols": "^2.96.3",
+    "topojson": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
