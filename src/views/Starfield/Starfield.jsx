@@ -4,12 +4,12 @@ import * as THREE from 'three';
 
 import bg from 'assets/images/starfield.png';
 
-const Background = styled.div`
-    width: 100%;
-    height: 100%;
+const Container = styled.div`
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 `;
 
 export default class Starfield extends Component {
@@ -32,20 +32,20 @@ export default class Starfield extends Component {
         })
 
         renderer.setSize(window.innerWidth, window.innerHeight);
-        // may to append DOM element
+        this.container.appendChild(renderer.domElement);
         scene.add(camera);
 
-        let render = function () {
-            requestAnimationFrame(render);
+        let renderStarfield = function () {
+            requestAnimationFrame(renderStarfield);
             renderer.render(scene, camera);
         };
 
-        render();
+        renderStarfield();
     }
 
     render() {
         return (
-            <Background />
+            <Container ref={node => this.container = node} />
         );
     }
 }

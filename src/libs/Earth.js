@@ -176,7 +176,6 @@ var earthjs = (function () {
             },
             $slc: {},
             ready: function ready(fn) {
-                debugger;
                 if (fn) {
                     globe._.readyFn = fn;
                     globe._.promeses = _.promeses;
@@ -206,7 +205,7 @@ var earthjs = (function () {
                                 var ar = args.slice(0, ln);
                                 var ready = globe[obj.name].ready;
                                 ar.unshift(err);
-                                debugger;
+
                                 if (ready) {
                                     ready.apply(globe, ar);
                                 } else {
