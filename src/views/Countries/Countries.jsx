@@ -95,12 +95,12 @@ export default class Countries extends Component {
         }
     }
 
+
+
     selectCountry = name => {
         const id = this.state.countries[name.toUpperCase().replace(/\s/g, '')].id;
         const scale = this.state.countries[name.toUpperCase().replace(/\s/g, '')].scale;
         const arr = [{ countries: [id] }];
-
-        console.log(arr, id, scale);
     }
 
     render() {
